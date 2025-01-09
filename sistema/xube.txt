@@ -1,0 +1,155 @@
+===Base de datos xube
+
+== Estructura de tabla para la tabla carritos de compras
+
+|------
+|Columna|Tipo|Nulo|Predeterminado
+|------
+|//**id_Carrito**//|int(11)|No|
+|num_Pedido|varchar(30)|No|
+|subtotal|varchar(20)|No|
+|impuestos|varchar(50)|No|
+|total|varchar(20)|No|
+|estatus|varchar(50)|No|
+|forma_Pago|varchar(50)|Sí|NULL
+|id_Usuario|int(12)|Sí|NULL
+|id_Cliente|int(12)|Sí|NULL
+== Volcado de datos para la tabla carritos de compras
+
+|7|1|3000|480|3480||004|1|5
+== Estructura de tabla para la tabla clientes
+
+|------
+|Columna|Tipo|Nulo|Predeterminado
+|------
+|//**id_Cliente**//|int(11)|No|
+|rfc|varchar(20)|No|
+|razon_Social|varchar(100)|No|
+|regimen_Fiscal|varchar(3)|No|
+|forma_Pago|varchar(3)|No|
+|codigo_PostalFiscal|varchar(5)|No|
+|calle|varchar(100)|No|
+|colonia|varchar(100)|No|
+|estado|varchar(20)|No|
+|municipio|varchar(100)|Sí|NULL
+|pais|varchar(2)|No|
+|num_Ext|varchar(8)|No|
+|num_Int|varchar(8)|No|
+|id_Usuario|int(11)|No|
+== Volcado de datos para la tabla clientes
+
+|5|GAAP192685|pedro abad garcia|602|004|75060|venustiano carranza|3 cruces|21|lomas|MX|22| |1
+== Estructura de tabla para la tabla cupones de descuento
+
+|------
+|Columna|Tipo|Nulo|Predeterminado
+|------
+|//**id_Cupon**//|int(11)|No|
+|nombre|varchar(70)|No|
+|descuento|float|No|
+|descripcion|varchar(500)|No|
+|estatus|bit(8)|No|
+|vigencia|date|No|
+== Volcado de datos para la tabla cupones de descuento
+
+|3|cupon feli|630|descuento de felicidad a planes de 1 año|1|2024-11-27
+== Estructura de tabla para la tabla detalles carritos
+
+|------
+|Columna|Tipo|Nulo|Predeterminado
+|------
+|//**id_Carrito**//|int(11)|No|
+|subtotal|float|No|
+|descuento|float|No|
+|impuestos|float|No|
+|total|float|No|
+|id_Plan|int(11)|No|
+|id_Cupon|int(11)|No|
+== Volcado de datos para la tabla detalles carritos
+
+|8|3000|630|480|2850|2|3
+== Estructura de tabla para la tabla permisos
+
+|------
+|Columna|Tipo|Nulo|Predeterminado
+|------
+|//**id_Permiso**//|int(11)|No|
+|editar_Usuario|bit(8)|No|
+|agregar_Usuario|bit(8)|No|
+|borrar_Usuario|bit(8)|No|
+|editar_Cupon|bit(8)|No|
+|agregar_Cupon|bit(8)|No|
+|borrar_Cupon|bit(8)|No|
+|editar_Plan|bit(8)|No|
+|agregar_Plan|bit(8)|No|
+|borrar_Plan|bit(8)|No|
+|editar_Precio|bit(8)|No|
+|editar_Carrito|bit(8)|No|
+|agregar_Carrito|bit(8)|No|
+|borrar_Carrito|bit(8)|No|
+|estatus|bit(8)|No|
+|id_Usuario|int(11)|Sí|NULL
+== Volcado de datos para la tabla permisos
+
+|6|0|0|0|0|0|0|0|0|48|0|1|1|1|1|1
+== Estructura de tabla para la tabla planes
+
+|------
+|Columna|Tipo|Nulo|Predeterminado
+|------
+|//**id_Plan**//|int(11)|No|
+|nombre|varchar(100)|No|
+|descripcion|varchar(500)|No|
+|categoria|varchar(50)|No|
+|vigencia|int(11)|No|
+|precio|float|No|
+|Impuestos|float|No|
+== Volcado de datos para la tabla planes
+
+|6|ww|wiwiwiwiwiiwiwiwiwi|telefono|20|120|0
+|7|ww|wiwiwiwiwiiwiwiwiwi|telefono|20|120|12
+|8|wq|wiwiwiwiwiiwiwiwiwi|telefono|20|130|233
+|9|wq|wiwiwiwiwiiwiwiwiwi|telefono|20|130|233
+== Estructura de tabla para la tabla suscripciones
+
+|------
+|Columna|Tipo|Nulo|Predeterminado
+|------
+|//**id_Suscripcion**//|int(11)|No|
+|fecha_Inicio|date|No|
+|fecha_Renovacion|date|No|
+|estatus|bit(8)|No|
+|serie|varchar(80)|No|
+|codigo|varchar(80)|No|
+|id_Cliente|int(11)|No|
+|id_Usuario|int(11)|No|
+|id_Plan|int(11)|No|
+|id_Precio|int(11)|No|
+== Volcado de datos para la tabla suscripciones
+
+|9|2024-11-21|2024-11-21|1|1A2b3C|123456|5|1|2|4
+== Estructura de tabla para la tabla usuarios
+
+|------
+|Columna|Tipo|Nulo|Predeterminado
+|------
+|//**id_Usuario**//|int(11)|No|
+|nombre|varchar(150)|No|
+|apellidos|varchar(100)|No|
+|email|varchar(100)|No|
+|estatus|bit(8)|No|
+|telefono|varchar(12)|No|
+|password|varchar(50)|No|
+|codigo|int(11)|Sí|NULL
+|vigencia_Codigo|date|Sí|NULL
+|tipo|varchar(1)|No|C
+|clave_Asociado|varchar(10)|Sí|NULL
+== Volcado de datos para la tabla usuarios
+
+|1|pedri|abad garcia|pedro1@gmail.com|1|2563211253|9adcb29710e807607b683f62e555c22dc5659713|89|2024-11-22|C|NULL
+|10|Juan|Perez|juanperez13@gmail.com|1|2212351245|12|NULL|NULL|S|12
+|37|Aleli|peres|a@gmail.com|49|1234567891|ca601a660833959beab93229f5fbea2bee11dbb0|NULL|NULL|C| 
+|38|pepe|que|pepe@gmail.com|49|1111123|2d0c8af807ef45ac17cafb2973d866ba8f38caa9|NULL|NULL|C| 
+|39|wawa|wa|wa@gmail.com|49|22|40bd001563085fc35165329ea1ff5c5ecbdbbeef|NULL|NULL|C| 
+|40|ade|sed|eds@gmail.com|49|987654738|8cb2237d0679ca88db6464eac60da96345513964|NULL|NULL|S| 
+|41|qq|qe|qw@gamil.com|49|111|40bd001563085fc35165329ea1ff5c5ecbdbbeef|NULL|NULL|A| 

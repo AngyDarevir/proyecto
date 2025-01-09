@@ -1,0 +1,334 @@
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Primera Hoja: Planes */
+.bg-primary {
+    background-color: #fff;
+}
+
+.planes {
+    text-align: center;
+    color: black;
+    padding: 20px;
+}
+
+nav {
+    margin-bottom: 20px;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+form input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #2c2c2c;
+    color: rgb(180, 180, 180);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #2c2c2c;
+}
+
+.plane {
+    margin-bottom: 20px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+.contai {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.planca {
+    background-color: white;
+    color: #333;
+    padding: 20px;
+    width: 30%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.planca h4 {
+    margin-bottom: 10px;
+}
+
+.din {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+.lis {
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+.lis li {
+    margin-bottom: 5px;
+}
+
+/* Segunda Hoja: Login */
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+form {
+    width: 90%;
+    max-width: 400px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+form h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+form h4 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+form button {
+    width: 48%;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #2c2c2c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+form button:hover {
+    background-color: #b4b4b4;
+}
+
+form a {
+    display: block;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #2c2c2c;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+form a:hover {
+    text-decoration: underline;
+}
+
+form .logueo {
+    margin-top: 10px;
+}
+
+form select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+/* Tercera Hoja: Recuperar Contraseña */
+.recuperar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.recuperar form {
+    width: 90%;
+    max-width: 400px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.recuperar form h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.recuperar form h4 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.recuperar form input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.recuperar form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #2c2c2c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.recuperar form input[type="submit"]:hover {
+    background-color: #a3a3a3;
+}
+
+.recuperar form a {
+    display: block;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #2c2c2c;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.recuperar form a:hover {
+    text-decoration: underline;
+}
+
+/* Cuarta Hoja: Registro */
+.registro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.registro form {
+    width: 95%; /* El formulario ahora ocupa el 95% de la pantalla */
+    max-width: 1000px; /* Se aumenta el máximo para más espacio */
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.registro form h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.registro form h4 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.registro form .inline-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.registro form .inline-group div {
+    width: 48%; /* Cada input en la misma línea ocupa el 48% del espacio */
+}
+
+.registro form input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.registro form select {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-bottom: 15px;
+}
+
+.registro form button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    background-color: #2c2c2c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.registro form button:hover {
+    background-color: #9b9b9b;
+}
+
+.registro form a {
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    color: #2c2c2c;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.registro form a:hover {
+    text-decoration: underline;
+}
